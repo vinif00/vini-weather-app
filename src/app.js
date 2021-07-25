@@ -54,6 +54,7 @@ app.get("/weather", (req, res) => {
           return res.send(error);
         }
         res.send({
+          visibility: forecastData.visibility,
           temperature: forecastData.temperature,
           precipitation: forecastData.precipitation,
           feelslike: forecastData.feelslike,

@@ -11,6 +11,7 @@ const forecast = (long, lat, cb) => {
       cb("Misspelled bro", undefined);
     } else {
       cb(undefined, {
+        visibility: body.current.visibility,
         temperature: body.current.temperature,
         precipitation: body.current.precip,
         feelslike: body.current.feelslike,

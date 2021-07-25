@@ -16,7 +16,7 @@ async function getWeather() {
     if (data.error) {
       return (p.textContent = data.error);
     }
-    p.textContent = `Em ${data.location}, a temperatura é ${data.temperature}ºC, com sensação de ${data.feelslike}ºC. ${data.precipitation}% de chance de chuva.`;
+    p.textContent = `Em ${data.location}, a temperatura é ${data.temperature}ºC, com sensação de ${data.feelslike}ºC. ${data.precipitation}% de chance de chuva. Visibilidade de ${data.visibility}%.`;
   } catch (error) {
     p.textContent = "Não foi possível conectar com o servidor.";
   }
